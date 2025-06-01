@@ -20,7 +20,7 @@
                 HasShadow="True"
                 HorizontalOptions="Center">
                 <Image
-                    Source=""
+                    Source="image.jpg"
                     HeightRequest="120"
                     WidthRequest="120"
                     Aspect="AspectFit"
