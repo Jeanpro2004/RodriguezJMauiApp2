@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RodriguezJMauiApp2.AboutPage"
+             Title="Acerca de"
+             BackgroundColor="{StaticResource Primary}">
+
+    <ScrollView>
+        <VerticalStackLayout 
+            Padding="30,40"
+            Spacing="25"
+            HorizontalOptions="Center">
+
+            
+            <Frame 
+                BackgroundColor="White"
+                CornerRadius="75"
+                HeightRequest="150"
+                WidthRequest="150"
+                HasShadow="True"
+                HorizontalOptions="Center">
+                <Image
+                    Source=""
+                    HeightRequest="120"
+                    WidthRequest="120"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+            </Frame>
+
+            <Label
+                Text="Rodriguez Jean"
+                FontSize="32"
+                FontAttributes="Bold"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+            <Frame 
+                BackgroundColor="White"
+                CornerRadius="15"
+                Padding="20"
+                HasShadow="True">
+                <VerticalStackLayout Spacing="15">
+                    <Label
+                        Text="Acerca de mí"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="{StaticResource Primary}"
+                        HorizontalOptions="Center" />
+
+                    <Label
+                        Text="Desarrollador apasionado por la tecnología móvil y desarrollo Web/Transcurriendo la carrera de Ingenieria en Software en la Universidad de las Americas."
+                        FontSize="16"
+                        TextColor="Black"
+                        LineHeight="1.5"
+                        HorizontalTextAlignment="Center" />
+
+                    <BoxView 
+                        HeightRequest="2"
+                        BackgroundColor="{StaticResource Primary}"
+                        HorizontalOptions="Fill"
+                        Margin="20,10" />
+
+                    <Label
+                        Text="Especialidades:"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        TextColor="{StaticResource Primary}" />
+
+                    <Label
+                        Text="• Desarrollo Movil y Web&#10;• 5to Semestre&#10;• Experiencia Java,C++,C#,Python&#10;• Jugador de Fortnite"
+                        FontSize="14"
+                        TextColor="Black"
+                        LineHeight="1.4" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Parte del codigo generada por Inteligencia Artificial -->
+            <Frame 
+                BackgroundColor="#F0F0F0"
+                CornerRadius="10"
+                Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label
+                        Text="Mis Apuntes App"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="{StaticResource Primary}"
+                        HorizontalOptions="Center" />
+
+                    <Label
+                        Text="Versión 1.0"
+                        FontSize="14"
+                        TextColor="Gray"
+                        HorizontalOptions="Center" />
+
+                    <Label
+                        Text="Una aplicación simple y eficiente para gestionar tus notas y apuntes de manera local."
+                        FontSize="14"
+                        TextColor="Black"
+                        HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Frame>
+
+            
+            <Button
+                Text="📧 Contactar"
+                BackgroundColor="White"
+                TextColor="{StaticResource Primary}"
+                CornerRadius="25"
+                HeightRequest="50"
+                FontSize="16"
+                FontAttributes="Bold"
+                Clicked="OnContactClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

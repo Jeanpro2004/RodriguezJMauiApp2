@@ -2,21 +2,139 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RodriguezJMauiApp2.Demo"
-             Title="Demo">
-    <VerticalStackLayout>
-        <Label 
-            x:Name ="TextoArchivo"
-            />
+             Title="Mis Apuntes"
+             BackgroundColor="#F5F5F5">
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-        <Entry
-            x:Name ="texto1"
-            Placeholder ="Ingrese el texto"/>
+        
+        <Frame Grid.Row="0" 
+               BackgroundColor="{StaticResource Primary}"
+               CornerRadius="0"
+               Padding="20,15"
+               HasShadow="True">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="📝" FontSize="24" VerticalOptions="Center" />
+                <Label 
+                    Text="Mis Apuntes Personales"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </StackLayout>
+        </Frame>
 
-        <Button
-            x:Name ="BotonGuardar"
-            Text="Guardar en Archivo"
-            Clicked ="BotonGuardar_Clicked"
-             />
-    </VerticalStackLayout>
+        
+        <ScrollView Grid.Row="1" Padding="20">
+            <VerticalStackLayout Spacing="20">
+
+                
+                <Frame BackgroundColor="White" 
+                       CornerRadius="10" 
+                       Padding="15"
+                       HasShadow="True">
+                    <VerticalStackLayout Spacing="10">
+                        <Label 
+                            Text="📄 Contenido Guardado"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            TextColor="{StaticResource Primary}" />
+
+                        <BoxView HeightRequest="1" BackgroundColor="LightGray" />
+
+                        <ScrollView HeightRequest="200">
+                            <Label 
+                                x:Name="TextoArchivo"
+                                Text="No hay contenido guardado aún..."
+                                FontSize="14"
+                                TextColor="Gray"
+                                BackgroundColor="#FAFAFA"
+                                Padding="10" />
+                        </ScrollView>
+                    </VerticalStackLayout>
+                </Frame>
+
+                
+                <Frame BackgroundColor="White" 
+                       CornerRadius="10" 
+                       Padding="15"
+                       HasShadow="True">
+                    <VerticalStackLayout Spacing="15">
+                        <Label 
+                            Text="✏️ Escribir Nueva Nota"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            TextColor="{StaticResource Primary}" />
+
+                        <Editor
+                            x:Name="texto1"
+                            Placeholder="Escribe aquí tus apuntes, notas o ideas..."
+                            HeightRequest="150"
+                            FontSize="14"
+                            BackgroundColor="#FAFAFA" />
+
+                        
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Label Text="💡" FontSize="16" VerticalOptions="Center" />
+                            <Label 
+                                Text="Tip: Tus notas se empezaran a guardar localmente en tu PC"
+                                FontSize="12"
+                                TextColor="Gray"
+                                VerticalOptions="Center" />
+                        </StackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        
+        <Frame Grid.Row="2" 
+               BackgroundColor="White"
+               CornerRadius="0"
+               Padding="20,15"
+               HasShadow="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    Grid.Column="0"
+                    x:Name="BotonLimpiar"
+                    Text="🗑️ Limpiar"
+                    BackgroundColor="LightCoral"
+                    TextColor="White"
+                    CornerRadius="20"
+                    Margin="0,0,10,0"
+                    Clicked="BotonLimpiar_Clicked" />
+
+                <Button
+                    Grid.Column="1"
+                    x:Name="BotonGuardar"
+                    Text="💾 Guardar Nota"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White"
+                    CornerRadius="20"
+                    Margin="10,0,0,0"
+                    Clicked="BotonGuardar_Clicked" />
+            </Grid>
+        </Frame>
+
+        <!-- Codigo generado por Inteligencia Artificial-->
+        <ActivityIndicator 
+            x:Name="LoadingIndicator"
+            Grid.Row="0" Grid.RowSpan="3"
+            IsVisible="False"
+            IsRunning="False"
+            Color="{StaticResource Primary}"
+            BackgroundColor="#80000000" />
+       
+    </Grid>
 </ContentPage>
