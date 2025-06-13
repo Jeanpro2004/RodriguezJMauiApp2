@@ -11,22 +11,32 @@
             Spacing="25"
             HorizontalOptions="Center">
 
-            
+
             <Frame 
-                BackgroundColor="White"
-                CornerRadius="75"
+            BackgroundColor="White"
+             CornerRadius="75"
+             HeightRequest="150"
+             WidthRequest="150"
+             HasShadow="True"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+                <Image
+                Source="https://i.pinimg.com/originals/dd/96/83/dd9683e1341d7f8edf6708ce26cd3f2b.jpg"
                 HeightRequest="150"
                 WidthRequest="150"
-                HasShadow="True"
-                HorizontalOptions="Center">
-                <Image
-                    Source="image.jpg"
-                    HeightRequest="120"
-                    WidthRequest="120"
-                    Aspect="AspectFit"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center" />
+                 Aspect="AspectFill"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+                    <Image.Clip>
+                        <EllipseGeometry
+                Center="60,80"
+                RadiusX="80"
+                RadiusY="80" />
+                    </Image.Clip>
+                </Image>
             </Frame>
+
+
 
             <Label
                 Text="Rodriguez Jean"
